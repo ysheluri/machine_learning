@@ -47,9 +47,9 @@ y=df['Price']
 Now import library ```from sklearn.model_selection import train_test_split```
 We split the test and train data by using the code 
 ```
-x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.4,random_state=101)
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.3,random_state=101)
 ``` 
-Here we used 40% of data for testing and 60% for training.
+
 ### Training our data using linear regression 
 First we need to import linear regression by 
 ```
@@ -85,15 +85,15 @@ We need to import ```from sklearn import metrics```
 ```
 metrics.mean_absolute_error(y_test,predictions)
 ```
-82288.22251914928
+81257.55795855916
 ```
 metrics.mean_squared_error(y_test,predictions)
 ```
-10460958907.208244
+10169125565.897552
 ```
 np.sqrt(metrics.mean_squared_error(y_test,predictions))
 ```
-102278.82922290538
+100842.08231635022
 
 
 
