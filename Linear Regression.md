@@ -46,7 +46,10 @@ y=df['Price']
 ```
 Now import library ```from sklearn.model_selection import train_test_split```
 We split the test and train data by using the code 
-```x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.4,random_state=101)``` Here we used 40% of data for testing and 60% for training.
+```
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.4,random_state=101)
+``` 
+Here we used 40% of data for testing and 60% for training.
 ### Training our data using linear regression 
 First we need to import linear regression by 
 ```
@@ -54,14 +57,20 @@ from sklearn.linear_model import LinearRegression
 lm=LinearRegression()
 ```
 Now we need to fit our model using fit()
-```lm.fit(x_train,y_train)```
+```
+lm.fit(x_train,y_train)
+```
 **LinearRegression(copy_X=True, fit_intercept=True, n_jobs=None, normalize=False)**
 Here training and fitting our model is done.
 ### Predictions :
 In this predictions we will find how good our model is we can predict values for our testing data (x_test).
-```predictions = lm.predict(x_test)```
+```
+predictions = lm.predict(x_test)
+```
 Now we can visualize and we can see if our model is performing well or not
-```plt.scatter(y_test,predictions)```
+```
+plt.scatter(y_test,predictions)
+```
 ![download (3)](https://user-images.githubusercontent.com/45037048/118632932-8d8f2480-b7ee-11eb-8b51-52918bd95e14.png)
 
 ### Evaluation :
@@ -73,11 +82,17 @@ rmse = root of mean square error
 ```
 We need to import ```from sklearn import metrics```
 
-```metrics.mean_absolute_error(y_test,predictions)```
+```
+metrics.mean_absolute_error(y_test,predictions)
+```
 82288.22251914928
-```metrics.mean_squared_error(y_test,predictions)```
+```
+metrics.mean_squared_error(y_test,predictions)
+```
 10460958907.208244
-```np.sqrt(metrics.mean_squared_error(y_test,predictions))```
+```
+np.sqrt(metrics.mean_squared_error(y_test,predictions))
+```
 102278.82922290538
 
 
